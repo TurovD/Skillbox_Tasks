@@ -1,4 +1,4 @@
-# TODO здесь писать код
+
 cages = int(input('Введите количество клеток: '))
 list_cages = []
 list_effectiveness = []
