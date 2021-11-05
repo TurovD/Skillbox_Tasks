@@ -44,5 +44,25 @@ data = {
     ]
 }
 
+print('1.')
+for key in sorted(data.keys()):
+    print(key,':', data[key])
+print('\n2.')
+up = {'total_diff' : 100}
+data['ETH'].update(up)
+print('ETH:',data["ETH"])
 
-# TODO здесь писать код
+print('\n3.')
+upd = {'name' : "doge"}
+data["tokens"][0]['fst_token_info'].update(upd)
+print(data["tokens"][0])
+
+print('\n4.')
+data["ETH"]["totalOut"] = data["tokens"][0].pop('totalOut')
+print('Значение в внутри “ETH”',data["ETH"])
+print('tokens:',data["tokens"])
+
+
+print('\n5.')
+data["tokens"][1]['sec_token_info']['tota_price'] = data["tokens"][1]['sec_token_info'].pop('price')
+print('название ключа',data["tokens"][1]['sec_token_info'])
