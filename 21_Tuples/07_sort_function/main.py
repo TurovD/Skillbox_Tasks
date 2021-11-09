@@ -1,8 +1,8 @@
-def sorting(tpl):
-    for element in tpl:
-        if not isinstance(element, int):
-            return tpl
-    return tuple(sorted(tpl))
+def sorting(elements):
+    for element in elements:
+        if not isinstance(elements, int):
+            return elements
+    return tuple(sorted(elements))
 
 
 list_numbers = []
