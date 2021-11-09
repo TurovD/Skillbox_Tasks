@@ -41,4 +41,4 @@ my_lst = f(students)[0]
 l = f(students)[1]
 print(my_lst, l)
 
-# TODO исправить код
+
