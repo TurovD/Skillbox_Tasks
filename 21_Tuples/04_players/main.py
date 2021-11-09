@@ -4,4 +4,5 @@ players = {
     ("Rob", "Bobbin"): (12, 8, 2)
 }
 
-# TODO здесь писать код
+compression_players =list(i_key + i_value for i_key, i_value in players.items())
+print(f'{ compression_players } ')
