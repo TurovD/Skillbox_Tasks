@@ -24,4 +24,4 @@ def find_key(text, key, deep):
             result = None
         return result
 
-print(find_key(site, 'p',1))
+print(find_key(site, input('Введите ключ: '),int(input('Введите глубину: '))))

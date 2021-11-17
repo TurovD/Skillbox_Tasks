@@ -12,15 +12,20 @@ site = {
     }
  }
 
-def changing_func(site,tag,name):
-    if site.keys() == tag:
-        print(1)
-    else:
-        changing_func(site)
 
+
+def replace_item(site, key, replace_value):
+    for keys, values in site.items():
+        if isinstance(values, dict):
+            site[keys] = replace_item(values, key, replace_value)
+    if key in site:
+        site[key] = replace_value
+    return site
 
 
 for _ in range(int(input('Сколько сайтов: '))):
     name = input('Введите название продукта для нового сайта: ')
-    changing_func(site,'title', name)
-    changing_func(site,'h2', name)
+    print('\nСайт для {}: '.format(name))
+    replace_item(site,'title', 'Куплю/продам {} недорого'.format(name))
+    replace_item(site, 'h2', 'У нас самая низкая цена на {}'.format(name))
+    print (site)
